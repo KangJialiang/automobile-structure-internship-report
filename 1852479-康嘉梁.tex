@@ -17,6 +17,7 @@ bibname = {参考文献},
 % \renewcommand\thesection{\chinese{section}}
 % \renewcommand\thesubsection{\arabic{subsection}}
 % \renewcommand\thesubsubsection{\thesubsection\thinspace.\thinspace\arabic{subsubsection}}
+\renewcommand\thesubsubsection{\alph{subsubsection})}
 
 \usepackage[version=4]{mhchem}
 
@@ -38,7 +39,7 @@ bibname = {参考文献},
 
 \usepackage{graphicx}
 \DeclareGraphicsExtensions{.pdf,.eps,.jpg,.png}
-\graphicspath{{img/body}, {img/gearbox}, {img/automobile electronics}}
+\graphicspath{{img/body}, {img/gearbox}, {img/automobile electronics}, {img/chassis}}
 \usepackage{caption}
 \captionsetup[figure]{labelsep=period}
 \usepackage{float} %设置图片浮动位置的宏包
@@ -164,9 +165,9 @@ bibname = {参考文献},
 
 从隔振角度来说，希望悬置较软，以期将振动更好地隔离；而从支承和限位角度来说，为使发动机舱能布置紧凑，又希望悬置越硬越好。在悬置设计中如何最优化选取悬置刚度是一个极为重要的问题。同时，为了使振动得到迅速衰减，发动机悬置还应具有适当的的阻尼。
 
-领克02车型的动力总成采用三点固定的方式，通过一个后悬置和两个前悬置将动力总成与车身连接，如\cref{mount}。\cref{mount B}看得较清楚，我们可以看到，后悬置与发动机和车身的两个连接轴线互相垂直，且两连接处都有橡胶减震块，能有效衰减动力总成相对车身俯仰和偏航两个方向的相对运动，而对侧倾的衰减主要由前面两悬置实现。
+领克02车型的动力总成采用三点固定的方式，通过一个后悬置和两个前悬置将动力总成与车身连接，如\cref{mount}。\cref{mount B}看得较清楚，我们可以看到，后悬置与发动机和车身的两个连接轴线互相垂直，且两连接处都有橡胶减振块，能有效衰减动力总成相对车身俯仰和偏航两个方向的相对运动，而对侧倾的衰减主要由前面两悬置实现。
 
-当然，这种软连接的形式会对发动机的动力输出造成一定影响，因为部分扭矩被用于克服减震块的阻力。在一些超跑和方程式赛车中有将发动机直接固定在单体壳上的方式，以期最大化动力输出，但会恶化车辆的NVH (Noise, vibration, and harshness) 特性，在乘用车上一般都是用三点式或四点式的悬置将汽车动力总成固定在车身上。
+当然，这种软连接的形式会对发动机的动力输出造成一定影响，因为部分扭矩被用于克服减振块的阻力。在一些超跑和方程式赛车中有将发动机直接固定在单体壳上的方式，以期最大化动力输出，但会恶化车辆的NVH (Noise, vibration, and harshness) 特性，在乘用车上一般都是用三点式或四点式的悬置将汽车动力总成固定在车身上。
 
 \begin{figure}[htbp]
 	\centering
@@ -637,6 +638,7 @@ ADAS（\cref{ADAS}）的主要功能包括：自动泊车系统（APA）、自�
 本茨造的第一辆汽车，不过是把马车的马具去掉，在后轮上方放置发动机和传动装置（\cref{the first car}），这也符合当时对车的基本认识。但经过百年的优化，汽车变得和马车一点都不像。常见的三厢车由发动机室、驾驶室、行李箱组成，可以认为，这种布局是比较适合以内燃机为动力的轿车的。很多人认为电动汽车是未来，但电动车的电池包装在车底，电动机也在底盘上，甚至于未来的轮边电机、轮毂电机，那发动机室的意义何在？可以预见的是，电动汽车的大范围铺开应当会给车身的布局带来较大的变化，但现在就算是特斯拉这种新兴势力造出的电动车基本上还是沿用燃油车的布局（\cref{TESLA Model S}）。未来在没有动力装置约束的情况下，或许汽车的曲线会变得更平滑？或许乘员空间、储物空间会变大？可能真正革命性的改变就像乔布斯的智能手机一样，发布之前无法想象，但大家上手用了就都能体会到设计之精巧吧。
 
 \begin{figure}[htbp]
+	\centering
 	\begin{minipage}[b]{0.4\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{the first car}
@@ -654,17 +656,504 @@ ADAS（\cref{ADAS}）的主要功能包括：自动泊车系统（APA）、自�
 \clearpage
 
 \section{底盘部分}
-\subsection{麦弗逊悬架中的减震器的轴线为什么和螺旋弹簧的轴线不重合？}
-\subsection{多连杆悬架那些四轮定位定位参数可以调整，如何调整？}
-\subsection{试叙述减振器的工作原理和几个功能阀的作用。}
-\subsection{你拆有哪些类型的转向器？各有什么特点？如何调整转向系统间隙？}
-\subsection{摩擦式离合器自由间隙的位置，并说出为什么要有自由间隙。自由间隙的过大过小有什
-	么不利的影响？ 车辆在使用过程中自由间隙是怎样变化的？}
-\subsection{试述液力变矩器工作原理，其泵轮、导轮和涡轮分别与什么部件相连接？}
-\subsection{简述鼓式制动器间隙自动调整原理。}
-\subsection{简述真空助力泵的工作原理。}
-\subsection{简述万向节的构造特性、种类以及速度特性。}
-\clearpage
+\subsection{麦弗逊悬架中的减振器的轴线为什么和螺旋弹簧的轴线不重合？}
 
+麦弗逊悬架（\cref{McPherson suspension}）是烛式悬架的改进，用下摆臂承受大部分侧向力，改善了滑动立柱的受力状况。它的主销为虚拟主销，是滑动立柱上支点和下摆臂外端的球铰中心的连线，属于车轮绕摆动主销偏转的独立悬架。
+
+然而，麦弗逊悬架中仍有部分横向力由减振器活塞和活塞杆承受。当车轮传来的侧向力较大时，减振器活塞杆和活塞侧壁间会产生较大的正压力，增大滑动立柱摩擦和磨损。当螺旋弹簧轴线与减振器轴线成一小角度时，弹簧可通过轴向压缩参与到轴向力的承受中来，这样便可减小活塞运动阻力，使车轮跳动顺畅，同时减少磨损，提高减振器使用寿命。
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{0.8\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{McPherson suspension}
+		\caption{麦弗逊式独立悬架}
+		\label{McPherson suspension}
+	\end{minipage}
+\end{figure}
+
+\subsection{多连杆悬架那些四轮定位定位参数可以调整，如何调整？}
+
+多连杆悬架上车轮的外倾角和前束可调。
+
+\cref{rear suspension Tiguan}所示的为大众途观的后悬架，它是一种多连杆式独立悬架。途观汽车基于大众的PQ35平台，采用了前麦弗逊后多连杆的悬架组合方式，其上的多连杆式后悬架由三根横臂和一根纵臂组成，在车轮跳动时，三根横臂定位车轮并承担横向力，纵臂承担车身纵向力。
+
+车轮外倾和前束的调整是通过横臂与副车架连接处螺栓上的偏心垫片（\cref{eccentric gasket}）实现的。在途观的后悬架上，宽粗的后杆（\cref{eccentric gasket 1}）和上侧的前杆（\cref{eccentric gasket 2}）采用了这种偏心垫片的定位方式。注意到，这种连接中，垫片内圈开有一成心形的孔，这种心形孔在圆孔的基础上有一向内突出的实体部分，且孔的中心与垫片外圆的圆心不重合。螺栓上沿母线方向有一凹槽，偏心垫片内孔上的凸起部分恰可嵌入此凹槽中。副车架的螺栓孔成长槽型，螺栓可在其中横向滑动。螺栓孔左右有两凸起部分，相对地在螺栓孔周围形成凹陷，凹陷部分内圈的直径和偏心垫片外径相等，垫片装入后便不可沿任一周向移动，但可旋转。旋转垫片，便会改变垫片上孔的位置，由于孔是偏心的，这就使得孔在旋转时横向位置改变，带动螺栓的横向位置改变，让横臂与副车架连接点位置有一左右调整的范围。由于车架是固定在车身上的，横臂的左右移动会造成其与车轮连接点位置的左右移动，车轮的外倾和前束便就改变了。注意到，两可调横臂与车轮轮毂连接的位置既不在车轮转动轴线的正上方或正下方，也不在正前方或正右方，故对外倾和前束的调整是相互影响的，两定位参数会同时改变，调整时需综合考虑。
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{0.9\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{rear suspension Tiguan}
+		\caption{途观后悬架（多连杆式独立悬架）}
+		\label{rear suspension Tiguan}
+	\end{minipage}
+	\begin{minipage}[b]{\textwidth}
+		\centering
+		\subfigure[]{\includegraphics[width=0.44\textwidth]{eccentric gasket 1}\label{eccentric gasket 1}}
+		\subfigure[]{\includegraphics[width=0.46\textwidth]{eccentric gasket 2}\label{eccentric gasket 2}}
+		\caption{偏心垫片}
+		\label{eccentric gasket}
+	\end{minipage}
+\end{figure}
+
+\subsection{试叙述减振器的工作原理和几个功能阀的作用。}
+
+汽车悬架系统中广泛采用的液力减振器的基本原理是当车架与车桥作往复相对运动时，减振器中的活塞在缸筒内也作往复运动，减振器壳体内的油液反复地从一个内腔通过一些窄小的空隙流入另一内腔。此时，孔壁与油液间摩擦及液体分子内摩擦便形成对振动的阻尼力，使车架和车身的振动能量转化为热能，被油液和减振器壳体所吸收，然后散到大气中。减振器阻尼力的大小随车架与车桥（或车轮）的相对速度的增减而增减，并且与油液黏度有关。
+
+减振器与弹性元件承担着缓和冲击和减振的任务，减振器的阻尼力越大，振动消除得越快，但阻尼力过大，将使悬架弹性变坏，甚至使减振器连接件损坏。要调节弹性元件和减振器这一矛盾，减振器需满足如下要求：
+\begin{itemize}
+	\item 在压缩行程（车桥和车架相互靠近），减振器阻尼力较小，以便充分发挥弹性元件的弹性作用，缓和冲击。这时，弹性元件起主要作用。
+	\item 在悬架伸张行程中（车桥和车架相互远离），减振器阻尼力应较大，迅速减振。
+	\item 当车桥（或车轮）与车架间的相对速度过大时，要求减振器能自动加大液流量，使阻尼力始终维持在一定限度之内，以避免过大的冲击载荷。
+\end{itemize}
+
+车上广泛使用的双向作用桶式减振器上对阻尼力大小的控制通过压缩阀、伸张阀、流通阀和补偿阀四个功能阀以及通常与阀制成一体的常通孔来实现，它的工作原理按\cref{double action shock absorber}分为压缩和伸张两个行程加以说明。
+
+压缩行程为汽车车轮滚上凸起或滚出凹坑时，此时汽车车轮移近车身，减振器受压缩。减振器内活塞3向下移动，活塞下腔室的容积减少，油压升高，油液流经流通阀8流到活塞上面的腔室（上腔）。上腔被活塞杆1占去了部分空间，因而上腔增加的容积小于下腔减小的容积，下腔中多出部分的油液推开压缩阀6，流回储油缸5。这些阀对油的节流形成悬架受压缩时的阻尼力。当活塞运动速度很快时，下腔油压很大，克服压缩阀压紧弹簧弹力将压缩阀完全打开，阻尼力不再增加，起到卸荷作用。
+
+伸张行程为汽车车轮滚离凸起或滚进凹坑时，此时车轮远离车身，减振器受拉伸。减振器的活塞3向上移动，活塞上腔油压升高，流通阀8关闭，上腔内的油液推开伸张阀4流入下腔。由于活塞杆的存在，自上腔流来的油液不足以充满下腔增加的容积，使下腔产生一真空度，这时储油缸中的油液推开补偿阀7流进下腔进行补充。这些阀的节流作用对悬架在伸张运动时起到阻尼作用。当活塞运动速度很快，上腔油压很大，克服伸张阀的压紧弹簧弹力，伸张阀完全打开，阻尼力不再增加，起卸荷作用。
+
+伸张阀和压缩阀分别是拉伸行程和压缩行程的卸载阀。补偿阀和流通阀在拉伸和压缩行程中补偿油液，避免上下腔中出现真空。
+
+伸张阀和压缩阀的节流阻力都随活塞运动速度而变化。两阀上均有常通小孔隙。当振动速度较小时，只靠常通小孔工作；当振动速度稍大时，阀门被推开，节流阻力取决于阀门开度；当车身振动剧烈时，活塞中油压骤变，伸张阀和压缩阀被完全推开，使得油压在很短时间内达到平衡，限制阻尼力的过量增加，压缩过程中弹性元件的缓冲作用得到充分发挥，减振器及悬架的某些零件也不会因超载而损坏。
+
+由于伸张阀弹簧的刚度和预紧力设计得大于压缩阀，且伸张阀上相应常通缝隙的通道截面积总和小于压缩阀，这使得减振器的伸张行程产生的阻尼力大于压缩行程的阻尼力，达到迅速减振的要求。
+
+通常，伸张阀和流通阀制成一体，位于活塞上（\cref{valves on shock absorber}），压缩阀和补偿阀制成一体安装在工作缸筒底。不同要求的两制成一体的阀可分别做在阀体的内圈和外圈上，常通孔通过短路阻隔油液流动的“围墙”的缝隙实现。
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{double action shock absorber}
+		\caption{双向作用筒式减振器工作原理示意图}
+		\label{double action shock absorber}
+	\end{minipage}
+	\begin{minipage}[b]{0.6\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{valves on shock absorber}
+		\caption{减振器活塞}
+		\label{valves on shock absorber}
+	\end{minipage}
+\end{figure}
+
+\subsection{你拆有哪些类型的转向器？各有什么特点？如何调整转向系统间隙？}
+
+我们拆的转向器主要有齿轮齿条式转向器、循环球式转向器、蜗杆曲柄指销式转向器和球面蜗杆滚轮式转向器四种。
+
+齿轮齿条式转向器（\cref{rack and pinion steering gear}）的传动件为齿轮和齿条。特点为：结构简单，紧凑；质量轻；转向灵敏；制造容易，成本低；正、逆效率高；转向传动机构简单，不需要转向摇臂和直拉杆。
+
+循环球式转向器（\cref{recirculating ball-type steering}）一般采用两级传动，第一级为螺杆螺母传动副，第二级为齿条齿扇传动副。它的特点为：正传动效率高达\qtyrange[range-phrase = $\,\sim\,$, range-units = single]{90}{95}{\percent}，转向省力；寿命长，工作平稳；但逆效率也很高，容易打手。
+
+蜗杆曲柄指销式转向器（\cref{worm and crankpin steering gear}）的主动件为转向蜗杆，从动件为指销。它的特点为结构较简单，传动效率较高，可逆性适中，摇臂轴转角较大。我们拆装的转向器采用双指销，双指销式转向器的特点为：每个指销所承受的载荷小，因此寿命长；在采用同样的蜗杆时，运动范围大，当行程固定时蜗杆较短；但对蜗杆加工精度要求高。
+
+球面蜗杆滚轮式转向器（\cref{cam and roller steering gear}）的主动件为球面蜗杆，从动件为滚轮。这种转向器，由于球面蜗杆与滚轮的传动是滚动摩擦，可减少转向器的磨损，同时也使转向轻便，此外，还具有较为合适的传动可逆性，但制造较为复杂。
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{0.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{rack and pinion steering gear}
+		\caption{齿轮齿条式转向器}
+		\label{rack and pinion steering gear}
+	\end{minipage}
+	\begin{minipage}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{recirculating ball-type steering}
+		\caption{循环球式转向器}
+		\label{recirculating ball-type steering}
+	\end{minipage}
+	\begin{minipage}[b]{0.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{worm and crankpin steering gear}
+		\caption{蜗杆曲柄指销式转向器}
+		\label{worm and crankpin steering gear}
+	\end{minipage}
+	\begin{minipage}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{cam and roller steering gear}
+		\caption{球面蜗杆滚轮式转向器}
+		\label{cam and roller steering gear}
+	\end{minipage}
+\end{figure}
+
+齿轮齿条式转向器的间隙调节装置如\cref{rack and pinion steering gear clearance adjuster}。压块下方有圆柱形凹槽，通过压块衬片与齿条配合，拧在调整螺钉座上的调整螺钉从上面压紧压块，压块中放置螺旋弹簧提供预紧力。当需要调节间隙时，只需旋入或旋出调整螺钉，便可改变压块相对于转向器壳体的上下位置，以改变与齿轮啮合段齿条被压紧的量，而齿轮轴线固定在壳体上，这样便可调整齿轮与齿条的啮合间隙。
+
+循环球式转向器间隙调节装置如\cref{recirculating ball-type steering clearance adjuster}。与齿条啮合的齿扇，其齿厚是在分度圆上沿齿扇轴线方向按线性关系变化的，从图中方向看齿扇左高右低，左厚右薄。只要使齿扇轴相对于齿条做轴向运动，即能调整二者的啮合间隙。调整螺钉14旋装在侧盖上，齿扇轴内侧端部有切槽，调整螺钉的圆柱形端头嵌入此切槽中。将调整螺钉旋入，则齿扇轴右移，啮合间隙减小；反之，啮合间隙增大。
+
+蜗杆曲柄指销式转向器间隙调节装置如\cref{worm and crankpin steering gear clearance adjuster}。指销绕摇臂轴旋转，摇臂轴可轴向移动（\cref{worm and crankpin steering gear clearance adjuster a}）。调整螺钉（\cref{worm and crankpin steering gear clearance adjuster b}）拧在侧盖上，旋入旋出调整螺钉可调节绕摇臂轴旋转的指销组件的轴向位置，指销与转向蜗杆的啮合位置随之改变。将调整螺钉旋入，则指销靠近蜗杆，啮合间隙减小；反之，啮合间隙增大。
+
+球面蜗杆滚轮式转向器间隙调节装置如\cref{cam and roller steering gear clearance adjuster}。摇臂轴上旋入一套筒，套筒外表面的螺纹又与侧盖上的螺纹孔配合，旋转这个调整套筒便可改变摇臂轴的轴向位置，从而令滚轮靠近或远离球面蜗杆。将调整套筒拧入，啮合间隙变小；拧出，啮合间隙就变大。调整完毕后用锁紧螺母锁紧。
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{0.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{rack and pinion steering gear clearance adjuster}
+		\caption{齿轮齿条式转向器间隙调节}
+		\label{rack and pinion steering gear clearance adjuster}
+	\end{minipage}
+	\begin{minipage}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{recirculating ball-type steering clearance adjuster}
+		\caption{循环球式转向器间隙调节}
+		\label{recirculating ball-type steering clearance adjuster}
+	\end{minipage}
+	\begin{minipage}[b]{0.6\textwidth}
+		\centering
+		\subfigure[]{\includegraphics[width=0.35\textwidth]{worm and crankpin steering gear clearance adjuster a}\label{worm and crankpin steering gear clearance adjuster a}}
+		\subfigure[]{\includegraphics[width=0.55\textwidth]{worm and crankpin steering gear clearance adjuster b}\label{worm and crankpin steering gear clearance adjuster b}}
+		\caption{蜗杆曲柄指销式转向器间隙调节}
+		\label{worm and crankpin steering gear clearance adjuster}
+	\end{minipage}
+	\begin{minipage}[b]{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{cam and roller steering gear clearance adjuster}
+		\caption{球面蜗杆滚轮式转向器间隙调节}
+		\label{cam and roller steering gear clearance adjuster}
+	\end{minipage}
+\end{figure}
+
+\subsection{摩擦式离合器自由间隙的位置，并说出为什么要有自由间隙。自由间隙的过大过小有什么不利的影响？ 车辆在使用过程中自由间隙是怎样变化的？}
+
+摩擦式离合器可分为膜片弹簧离合器和螺旋弹簧离合器。
+
+膜片弹簧离合器（\cref{diaphragm spring clutch}）的自由间隙位于分离轴承端面与膜片弹簧分离指端面间，螺旋弹簧离合器（\cref{spiral spring clutch}）的自由间隙位于分离轴承端面与分离杠杆端面间。
+
+从动盘在使用一段时间后磨损变薄，压紧弹簧的轴向形变量减小，压盘和从动盘在弹簧的作用下向飞轮方向移动，此时要求分离杠杆（或分离指）必须向靠近分离轴承的方向移动，才能保证离合器具有足够的压紧力。为了预留出分离杠杆向后的移动距离，须设置离合器自由间隙。离合器踏板有一段行程是用来消除这段间隙的，我们称之为离合器踏板自由行程，汽车行驶一段距离后，需调整离合器踏板自由行程；
+
+当离合器自由间隙过小时，摩擦片尚未磨薄至极限，分离杠杆（或分离指）即与分离轴承接触，压盘无法继续轴向移动压紧从动盘，从动盘上正压力减小，能够传递的力矩减小，可能出现离合器打滑，无法传递发动机动力；若自由间隙过大，离合器踏板自由行程过大，操纵灵敏性下降，分离效率降低，对换挡造成困难，甚至在离合器踏板踩到极限位置时仍无法拉开压盘，离合器不能完全分离，汽车不能平稳起步，不能平顺换挡，也不能防止传动系统过载。
+
+一般地，车辆在使用一段时间后会因从动盘磨损变薄造成离合器自由间隙增大，驾驶员应定期检查，当自由间隙小于规定值时应及时重新将其调大。但自调式膜片弹簧离合器（\cref{self-adjusting clutch}）能通过感应膜片弹簧和楔形自调机构使得膜片弹簧的工作压紧力始终为定值，自由间隙基本不变。
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{diaphragm spring clutch}
+		\caption{膜片弹簧离合器}
+		\label{diaphragm spring clutch}
+	\end{minipage}
+	\begin{minipage}[b]{0.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{spiral spring clutch}
+		\caption{周布螺旋弹簧离合器}
+		\label{spiral spring clutch}
+	\end{minipage}
+	\begin{minipage}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{self-adjusting clutch}
+		\caption{自调式膜片弹簧离合器}
+		\label{self-adjusting clutch}
+	\end{minipage}
+\end{figure}
+
+\subsection{试述液力变矩器工作原理，其泵轮、导轮和涡轮分别与什么部件相连接？}
+
+一般轿车上常用的三元件综合式液力变矩器的上有数个同心的轴起连接作用，如\cref{torque converter axle}。泵轮和变矩器壳体制成一体，而壳体前端与曲轴后端固连。涡轮通过\cref{torque converter axle}靠内的那圈花键与变矩器输出轴（同时也是变速器第一轴）相连，将动力传入变速器。综合式液力变矩器中有单向离合器，导轮与单向离合器的外座圈固连，而单向离合器的内座圈通过\cref{torque converter axle}靠外的花键固连于固定在变速器壳体上的导轮固定套管。单向离合器的内外座圈间仅能在一个方向上相对旋转。
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{torque converter axle}
+		\caption{液力变矩器的轴}
+		\label{torque converter axle}
+	\end{minipage}
+\end{figure}
+
+常见的液力变矩器有泵轮、涡轮、导轮三个工作轮。所有工作轮在装配后，形成断面为循环圆的环状体。变矩器环形内腔中的工作液，除有绕变矩器轴的圆周运动以外，还有在循环圆中的循环流动，故能将转矩从泵轮传到涡轮上。
+
+变矩器之所以能起变矩作用，是由于结构上比耦合器多了导轮机构。在液体循环流动的过程中，固定不动的导轮给涡轮一个反作用力矩，使涡轮输出的转矩不同于泵轮输入的转矩。下面用变矩器工作轮的展开图来说明变矩器的工作原理。展开图的制取方法为将循环圆上的中间流线（此流线将液流通道断面分割成面积相等的内外两部分）展开成一直线，各循环圆中间流线均在同一平面上展开，于是在展开图上，泵轮B、涡轮W和导轮D便成为三个环形平面，且工作轮的叶片角度也清楚地显示出来。
+
+为便于说明，设发动机转速及负荷不变，即变矩器泵轮的转速$n_b$及转矩$M_b$为常数。先讨论汽车起步工况。开始时涡轮转速为零，如\cref{torque converter working principle a}，工作液在泵轮叶片带动下，以一定的绝对速度沿图中箭头1的方向冲向涡轮叶片。因涡轮静止不动，液流将沿着叶片流出涡轮并冲向导轮，液流方向如图中箭头2所示。然后液流再从固定不动的导轮叶片沿箭头3方向流入泵轮中。当液体流过叶片时，受到叶片的作用力，其方向发生变化。设泵轮、涡轮和导轮对液流的作用力矩分别为$M_b$、$M_w^{\prime}$和$M_d$，根据液流受力平衡条件，则$M_w^{\prime} = M_b+M_d$。
+
+由于液流对涡轮的作用力矩$M_w$（即变矩器输出转矩）与$M_w^{\prime}$方向相反大小相等，因而在数值上，涡轮转矩$M_w$等于泵轮转矩$M_b$与导轮转矩$M_d$之和。显然，此时涡轮转矩$M_w$大于泵轮转矩$M_b$，即液力变矩器起了增大转矩的作用。
+
+当变矩器输出的转矩，经传动系统传到驱动轮上所产生的驱动力足以克服汽车起步阻力时，汽车即起步并开始加速，与之相联系的涡轮转速$n_w$也从零逐渐增加。这时液面在涡轮出口处不仅具有沿叶片方向的相对速度$w$，而且具有沿圆周方向的牵连速度$u$，故冲向导轮叶片的液流的绝对速度$v$应是二者的合成速度，如\cref{torque converter working principle b}所示。因原设泵轮转速不变，起变化的只是涡轮转速，故涡轮出口处相对速度$w$不变，只是牵连速度$u$起变化。由图可见，冲向导轮叶片的液流的绝对速度$v$将随着牵连速度$u$的增加（即涡轮转速$n_w$的增加）而逐渐向左倾斜，使导轮上所受转矩值逐渐减小。当涡轮转速增大到某一数值，由涡轮流出的液流（如\cref{torque converter working principle b}中$v$所示方向）正好沿导轮出口方向冲向导轮时，由于液体流经导轮时方向不改变，故导轮转矩$M_d$为零，于是涡轮转矩与泵轮转矩相等，即$M_w = M_b$。
+
+若涡轮转速$n_w$继续增大，液流绝对速度$v$方向继续向左倾，如\cref{torque converter working principle b}中$v^{\prime}$所示方向，导轮转矩方向与泵轮转矩方向相反，则涡轮转矩为前二者转矩之差（$M_w^{\prime} = M_b-M_d$），即变矩器输出转矩反而比输入转矩小。当涡轮转速$n_w$增大到与泵轮转速$n_b$相等时，工作液在循环圆中的循环流动停止，此时变矩器将不能传递动力。
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{0.8\textwidth}
+		\centering
+		\subfigure[]{\includegraphics[width=0.45\textwidth]{torque converter working principle a}\label{torque converter working principle a}}
+		\subfigure[]{\includegraphics[width=0.45\textwidth]{torque converter working principle b}\label{torque converter working principle b}}
+		\caption{液力变矩器的工作原理}
+		\label{torque converter working principle}
+	\end{minipage}
+\end{figure}
+
+当涡轮转速超过工况转变点$n_{w1}$后，导轮反而起减矩作用，传动效率大幅下降。单向离合器使得导轮在涡轮转速超过$n_{w1}$后跟随涡轮转动，让液力变矩器转变为液力耦合器工况，输出转矩等于输入转矩，保持较高传动效率。
+
+在平坦的铺装路面行驶时，不需要液力变矩器自动改变转矩的功能，此时可控制部分液力变矩器中有的锁止离合器接合，让涡轮与泵轮固连，输出转速等于输入转速，输出转矩等于输入转矩，传动效率为1。
+
+\subsection{简述鼓式制动器间隙自动调整原理。}
+
+鼓式制动器的制动蹄在不工作的原始位置时，其摩擦片与制动鼓之间应该保持合适的间隙，这个设定值由汽车制造厂规定，一般在\qtyrange[range-phrase = $\,\sim\,$, range-units = single]{0.25}{0.5}{\mm}之间。任何制动器摩擦副中的这一间隙（制动器间隙）如果过小，就不易保证彻底解除制动，造成摩擦副的拖磨；过大又将使制动踏板行程太长，以致驾驶人操作不便，同时也会推迟制动器开始起作用的时刻。但是在制动器工作过程中摩擦片的不断磨损必将导致制动器间隙逐渐增大。此情况严重时，即使将制动踏板踩下到极限位置，也产生不了足够的制动力矩。因此，要求任何形式的制动器在结构上必须保证有检查调整其间隙的可能。
+
+制动器间隙的调整有手动调整和自动调整两种方法。自动调整装置无需停车由技师操作，通过正常制动动作即可改变蹄鼓间隙，操作方便，但相应的制动器间隙调整装置更加复杂，零件相应增多，成本增加。鼓式制动器的间隙自调装置主要有摩擦限位式间隙自调装置、楔块式间隙自调装置和阶跃式间隙自调装置三种。其中，摩擦限位式间隙自调装置和楔块式间隙自调装置属一次调准式，经过一次完全制动即可自动调整间隙到设定值，但设计冷态间隙时并不能将制动蹄和制动鼓的弹性变形和热变形的最大值计入，一次调准式自调装置将这些变形也加以补偿，容易出现“调整过头”，使摩擦副拖磨甚至抱死。阶跃式间隙自调装置利用多次（可能达20次以上）较轻的制动动作才能一举消除所积累的过量间隙，不易“调整过头”。
+
+\subsubsection{摩擦限位式间隙自调装置工作原理}
+
+\cref{friction limit type clearance self-tuning}所示为一种安装在轮缸中的摩擦限位式间隙自调装置，用以限定不制动时制动蹄的内极限位置的限位摩擦环2，装在轮缸活塞3内端的环槽中（\cref{friction limit type clearance self-tuning a}）或借矩形断面螺纹旋装在活塞内端（\cref{friction limit type clearance self-tuning b}）。限位摩擦环是一个有切口的弹性金属环，压装入轮缸后与缸壁之间的摩擦力可达\qtyrange[range-phrase = $\,\sim\,$, range-units = single]{400}{550}{\newton}。活塞上的环槽或螺旋槽的宽度$B$大于限位摩擦环厚度$b$。活塞相对于摩擦环的最大轴向位移量即为二者之间的间隙$\Delta$，$\Delta=B-b$。间隙$\Delta$应等于在制动器间隙为设定的标准值时施行完全制动所需的轮缸活塞行程。
+
+不制动时，制动蹄复位弹簧只能将制动蹄向内拉，直到轮缸活塞接触摩擦环外端面，因为回位弹簧的力远远不足以克服摩擦环与缸壁间的摩擦力，此时如\cref{friction limit type clearance self-tuning}所示，间隙$\Delta$存在于活塞与摩擦环内端面之间。
+
+制动时，轮缸活塞外移。若制动器间隙正好等于设定值，则当活塞移动到与摩擦环内端面接触（即间隙$\Delta$消失）时，制动器间隙应当已经消失，蹄鼓间产生最大制动力矩。若制动器间隙由于种种原因增大到超过设定值，则活塞外移到$\Delta=0$时，仍不能实现完全制动。但只要轮缸液压足够大（达到\qtyrange[range-phrase = $\,\sim\,$, range-units = single]{0.8}{1.1}{\mega\pascal}），活塞可以克服摩擦力将摩擦环继续推出，直到实现完全制动。松开制动踏板后，制动蹄只能复位到活塞与处于新位置的限位摩擦环接触为止，制动器间隙恢复到设定值。可以看出，是摩擦环与气缸壁之间不可逆的轴向相对位移补偿了制动器的过大间隙。
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{\textwidth}
+		\centering
+		\subfigure[]{\includegraphics[width=0.45\textwidth]{friction limit type clearance self-tuning a}\label{friction limit type clearance self-tuning a}}
+		\subfigure[]{\includegraphics[width=0.45\textwidth]{friction limit type clearance self-tuning b}\label{friction limit type clearance self-tuning b}}
+		\caption{带摩擦限位环的轮缸}
+		\label{friction limit type clearance self-tuning}
+	\end{minipage}
+\end{figure}
+
+摩擦限位式间隙自调装置也可以装在制动蹄上，如\cref{friction limit type clearance self-tuning on brake shoe}所示。套筒3穿过制动蹄腹板4的长圆孔，并借被弹簧5压紧的两个限位摩擦片1保持其与制动蹄腹板4的相对位置，它的内孔又套在固定于制动底板6上的具有球头的限位销2上。套筒与限位销球头间的间隙$\Delta$限定了套筒及制动蹄相对于限位销的位移量，从而限定了制动器的设定间隙。当制动器间隙过大时，作用在制动踏板上的促动力可使制动蹄克服摩擦力，继续相对于套筒和限位销压紧制动鼓，实现完全制动。去除促动力后，套筒恢复到如图所示的原始位置，但制动蹄不能回到制动前的位置，因为用以抵消多余间隙的蹄与套筒之间的相对位移是不可逆的。这意味着制动器间隙已恢复到设定值。
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{friction limit type clearance self-tuning on brake shoe}
+		\caption{装在制动蹄上的间隙自调装置}
+		\label{friction limit type clearance self-tuning on brake shoe}
+	\end{minipage}
+\end{figure}
+
+\subsubsection{楔块式间隙自调装置工作原理}
+
+如\cref{wedge type clearance self-adjusting device}所示，间隙自调装置的楔形调节块4夹在与前制动蹄3固定在一起的斜支撑和驻车制动推杆8之间形成的切槽中。制动推杆两端有缺口，其右端缺口的端面压在楔形调节块4的齿形面上，楔形调节块的另一侧齿形面压在斜支撑上。在制动推杆内弹簧7的作用下，制动推杆紧紧压住楔形调节块和斜支撑。制动推杆左端的头部有一凸耳（\cref{wedge type clearance self-adjusting device a}），它与驻车制动杠杆9的外侧面之间有一设定间隙$\Delta$（\qtyrange[range-phrase = $\,\sim\,$, range-units = single]{0.2}{0.3}{\mm}）。制动推杆外弹簧5使制动杠杆9与制动推杆左端缺口的端面紧紧贴在一起。
+
+当制动蹄未磨损，在正常的制动间隙（设定间隙$\Delta$）内进行行车制动时，两制动蹄在轮缸活塞的推力作用下，外弹簧5被拉伸，使两蹄压靠到制动鼓上施以制动。由于内弹簧7的刚度大于外弹簧，故不被拉伸。它同驻车制动推杆8始终压住楔形调节块4，并与前制动蹄一起左移压靠到制动鼓上。此时制动杠杆9与制动推杆凸耳不会接触（因未超出设定间隙$\Delta$值）。
+
+当制动蹄磨损，制动间隙超过设定值$\Delta$，施以制动时，两蹄在轮缸活塞推力的作用下，外弹簧首先被拉伸到一定程度后，内弹簧也被拉伸，使制动杠杆与制动推杆凸耳不仅接触，并且外移。于是驻车制动推杆与前制动蹄斜支撑间形成的切槽与楔形调节块间便产生了间隙，于是楔形调节块被弹簧2往下拉，直到调节块与切槽再侧面重新接触为止，从而补偿了制动器的过量间隙。
+
+解除制动时，两制动蹄在复位弹簧的作用下复位，但不可能恢复到制动前的位置，因为借以补偿过量制动间隙的楔形调节块与切槽的相对位移是不可逆转的。这意味着制动杠杆外侧面与制动推杆头部凸耳之间的间隙，恢复到设定值$\Delta$。
+
+注意到，制动间隙调节弹簧2的刚度小于驻车制动推杆外弹簧5的刚度小于驻车制动推杆内弹簧7的刚度，这保证了正常制动时制动蹄的行程只由外弹簧5的形变提供，楔形调节块和驻车制动推杆间可看作刚性连接。而制动蹄行程过长时会拉动内弹簧7，破坏了楔形调节块和驻车制动推杆间的刚性连接，自调装置发挥作用将制动间隙减小回设定值。
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{0.8\textwidth}
+		\centering
+		\subfigure[]{\includegraphics[width=0.35\textwidth]{wedge type clearance self-adjusting device a}\label{wedge type clearance self-adjusting device a}}
+		\subfigure[]{\includegraphics[width=0.55\textwidth]{wedge type clearance self-adjusting device b}\label{wedge type clearance self-adjusting device b}}
+		\caption{楔块式间隙自调装置}
+		\label{wedge type clearance self-adjusting device}
+	\end{minipage}
+	\begin{minipage}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{wedge type clearance self-adjusting device physical}
+		\caption{楔块式间隙自调装置实物}
+		\label{wedge type clearance self-adjusting device physical}
+	\end{minipage}
+\end{figure}
+
+\subsubsection{阶跃式式间隙自调装置工作原理}
+
+\cref{two-way self-reinforcing brake}所示的双向自增力式制动器中即装备了一种阶跃式间隙自调装置，它只在若干次倒车制动后方起调整作用。
+
+这种间隙自调装置可视为一种顶杆长度可调的手动刹车间隙调节装置，外加一套自动调节机构，使顶杆体上带棘轮的调节螺钉自动旋转。调节装置只在倒车时才起作用。一次倒车制动只能使拨盘进入调节螺钉的棘齿一次，推动螺钉转动相应于一个棘齿距的角度，使顶杆体相对于顶杆套筒伸出特定距离。驾驶员可以通过多次倒车来逐步调整刹车间隙，由于低速倒车制动时刹车产热较小，这就避免了热膨胀导致的过度调整。
+
+当刹车间隙增加超出基准范围后，车轮在倒车状态下倒转，两个制动蹄在摩擦力的作用下与车轮同向旋转一个角度。这时，传动机构拉动拨杆绕固定销转过一定角度。由于制动间隙的增大，较大的促动力推动两个制动蹄压紧制动鼓时，制动蹄的相对位移大于标准制动间隙的相对位移，带动拨杆也有一较大的角位移。拨杆的齿嵌在调节螺钉的棘齿中，推动顶杆套相对顶杆体转动一角度，相应地顶杆体产生一定的位移，从而缩小制动间隙。在前进制动时，两个制动蹄仍相对于制动鼓同向旋转一个角度，但拨杆向相反方向移动，不能嵌入调整螺钉的棘齿中，也就不能起间隙调整的作用。同时，如果制动间隙在规定范围内，倒车制动时拨杆的位移不足以嵌入顶杆体调节螺钉的棘齿中，也不进行间隙调节。棘轮机构使得拨杆不能将调节螺钉反转，刹车间隙调节的作用不可逆。
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{0.6\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{two-way self-reinforcing brake}
+		\caption{双向自增力式制动器}
+		\label{two-way self-reinforcing brake}
+	\end{minipage}
+\end{figure}
+
+\subsection{简述真空助力泵的工作原理。}
+
+真空助力器如\cref{vacuum booster}。它通过借助发动机运行时发动机进气管的真空度为刹车助力，保证刹车效果的同时使驾驶员操作轻便，同时能为驾驶员反馈刹车踏板感，并在助力失效时让驾驶员仍可完全凭借人力推动制动主缸。
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{0.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{vacuum booster}
+		\caption{真空助力器}
+		\label{vacuum booster}
+	\end{minipage}
+\end{figure}
+
+真空助力器的前腔经真空止回阀通发动机进气管，外界空气经过滤环和毛毡过滤环后进入制动气室后腔，前后两腔被弹性的橡胶膜片隔开，膜片上装有复位弹簧。控制阀部分为真空助力器控制的核心，其上的真空阀和大气阀控制伺服气室前后两腔间及与大气间空气流道的通断。真空阀连接伺服气室前腔和控制阀腔，大气阀连接控制阀腔和大气，而控制阀腔和伺服气室后腔间可认为是常通的。注意真空止回阀不是真空阀，只起辅助产生和保持伺服气室前腔中真空度的作用，而不受制动踏板的控制。橡胶反作用盘是真空助力器中的传力零件，它装在控制阀柱塞、伺服气室膜片座和制动主缸推杆形成的密闭空间中，性质类似于不可压缩的流体，具有传递压强的作用，接受控制阀柱塞和伺服气室膜片座对其产生的压强用以推动制动主缸推杆。由于控制阀柱塞与反作用盘的接触面积小于伺服气室膜片座与反作用盘的接触面积小于制动主缸推杆与反作用盘的接触面积，故反作用盘可放大控制阀柱塞和伺服气室膜片座对其的压力。真空助力器工作过程借助\cref{vacuum booster working steps}说明。
+
+真空助力器不工作时，真空阀开启，大气阀关闭，如\cref{vacuum booster working steps a}。此时伺服气室前后两腔互相连通，并与大气隔绝。发动机开始工作后，进气管中产生真空度，将真空止回阀吸开，伺服气室前后两腔产生近似相等的真空度。
+
+部分踩下制动踏板后，来自踏板机构的控制力推动控制阀推杆和控制阀柱塞相对于膜片座前移，这就造成真空阀被部分关闭，控制阀被部分开启，如\cref{vacuum booster working steps b}。此时，伺服气室前后两腔间的通道被部分截断，而后腔与大气间的通道被部分开启。由于阀体通道上节流阻力的作用，此时虽然伺服气室前腔、大气和伺服气室后腔三者间均有通道连通，但在瞬态过程中前后两腔内的气压已不相等，这个压强差作用于伺服气室膜片，从而在膜片座上产生一向前的作用力。此作用力除部分用于平衡复位弹簧的复位弹力外，均作用在反作用盘上，推动制动主缸开始产生液压。
+
+完全踩下制动踏板后，真空阀全开，控制阀全闭，如\cref{vacuum booster working steps c}。此时伺服气室前腔的气压接近于发动机进气道中气压，而伺服气室后腔中气压接近于大气，真空助力器产生最大助力，对应的刹车力矩也达到最大。
+
+在踩下制动踏板的任一阶段中，若保持此位置，在平衡时真空阀和大气阀均可达到全闭，此时后腔中的真空度既不增加也不减小，而前腔真空度与发动机进气道中相同。可见，任一平衡状态下伺服气室前后腔中的稳定真空度差值均与踏板行程呈递增函数的关系，这就体现了控制阀的随动作用。
+
+由于橡胶反作用盘连接了控制阀柱塞、伺服气室膜片座和制动主缸推杆三者，它能将伺服气室作用力的大小反馈到刹车踏板使驾驶员有踏板感，同时能在真空助力器失效时保证刹车踏板传来的力可以直接推动制动主缸工作。
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{\textwidth}
+		\centering
+		\subfigure[]{\includegraphics[width=0.45\textwidth]{vacuum booster working steps a}\label{vacuum booster working steps a}}
+		\subfigure[]{\includegraphics[width=0.45\textwidth]{vacuum booster working steps b}\label{vacuum booster working steps b}}
+		\subfigure[]{\includegraphics[width=0.45\textwidth]{vacuum booster working steps c}\label{vacuum booster working steps c}}
+		\caption{真空助力器工作过程}
+		\label{vacuum booster working steps}
+	\end{minipage}
+\end{figure}
+
+\subsection{简述万向节的构造特性、种类以及速度特性。}
+
+万向节按在扭转方向上是否有明显弹性变形，可分为刚性万向节和挠性万向节。在刚性万向节中，动力靠两轴间的铰链式连接传递；而在挠性万向节中，动力靠弹性零件传递，且弹性零件兼起缓冲减振作用。刚性万向节按输入轴与输出轴瞬时速度特性又可分为不等速万向节、准等速万向节和等速万向节。不等速万向节的输入输出轴存在夹角时，两轴瞬时角速度不等，但平均角速度相等；准等速万向节在一定工作角度范围内输出输入轴瞬时角速度相等，在其它角度下近似相等；等速万向节输入、输出轴间始终以相等的瞬时角速度传递动力。
+
+\subsubsection{不等速万向节}
+
+\begin{itemize}
+	\item 十字轴式万向节（\cref{cross U-joint}）
+
+	      十字轴颈通过无内外圈的滚针轴承与套筒装配，套筒与万向节叉过盈配合。润滑方式采用脂润滑，最常见的损坏形式为轴颈磨损和滚针轴承磨损。
+
+	      十字轴式万向节中最常见的滚针轴承轴向定位方式是盖板式，利用螺栓和轴承将套筒固定在万向节叉上，并用锁片将螺栓锁紧。它工作可靠，拆装方便，但零件数目较多。有时采用弹性盖板，将其点焊在轴承座底部，装配后弹性盖板对轴承座底部有一定的预压力，用来防止高速转动时由于离心力作用引起的十字轴轴向窜动。除盖板式外，还有内挡圈固定式，外挡圈固定式、瓦盖固定式等定位方式。内、外挡圈固定式具有工作可靠、零件数量少、结构简单等优点。瓦盖固定式中的万向节叉与十字轴轴颈配合的圆孔不是一个整体，而是分成两半，再用螺钉连接起米，拆装方便、使用可靠，但制造工艺较为复杂。
+
+	      十字轴式万向节为不等速万向节，单用一个十字轴式万向节连接的两轴瞬时角速度不等（\cref{cross U-joint transmitting characteristic}）。一般将两个十字轴式万向节成对使用，并使得第一万向节从动叉与第二万向节主动叉在同一平面，且第一万向节两轴间夹角$\alpha_1$与第二万向节两轴间夹角$\alpha_2$相等，这样就构成了一准等速万向节组。双十字轴式万向节排列方式一般有平行排列方式（也称z形）和等腰三角形（也称w形）排列方式两种。采用z形布置时可允许中间传动轴通过滑动花键等方式改变长度，同时仍保持等速性。
+
+	      十字轴式万向节因其结构简单，工作可靠，传动效率高，生产成本低，且允许相邻两传动轴之间有较大的交角（一般不超过\qtyrange[range-phrase = $\,\sim\,$, range-units = single]{15}{20}{\degree}），普遍应用于各类汽车的传动系统中。
+\end{itemize}
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{0.35\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{cross U-joint}
+		\caption{十字轴式万向节}
+		\label{cross U-joint}
+	\end{minipage}
+	\begin{minipage}[b]{0.55\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{cross U-joint transmitting characteristic}
+		\caption{十字轴式万向节速度特性}
+		\label{cross U-joint transmitting characteristic}
+	\end{minipage}
+\end{figure}
+
+\subsubsection{准等速万向节}
+
+\begin{itemize}
+	\item 双联式万向节（\cref{double Cardan joint}）
+
+	      双联式万向节相当于传动轴长度缩减至最短的双十字轴万向节传动机构。它的等速原理就在于满足十字轴式万向节的等速条件，当双联叉的对称线平分所连两轴间的夹角时可实现等速传动。一般设置分度机构保证两轴与传力点连线的夹角接近相等，从而使两轴的速度差尽量小。
+
+	      双联式万向节允许有较大的轴间夹角（一般可达\SI{50}{\degree}），且轴承密封性好、结构紧凑、工作可靠、制造方便，但零件数目较多、外形尺寸较大，多用于越野汽车上。
+
+	\item 凸块式万向节（\cref{Tracta joint}）
+
+	      凸块式万向节与双联式万向节相似，主要由两个万向节叉和两个连扣互锁的滑动凸块组成。两滑动凸块相当于双联式万向节装置中的中间轴及两十字轴，由球面沟槽所引导，使其中心与万向节中心对称分布，并且是等距离的，保证输入轴和输出轴近似等速。
+
+	      凸块式万向节结构简单、工作可靠、加工方便，最大传力角度可达达\SI{32}{\degree}，但依靠沟槽组成的移动副间的滑动摩擦来工作，磨损较大，传动效率低，且没有自动定心功能，需要复杂的支撑壳体，对密封和润滑要求高。凸块式万向节在自动定心的等速万向节出现前一直占据统治地位。
+
+	\item 三销轴式万向节（\cref{three-pin joint}）
+
+	      三销轴式万向节中，主、从动叉为偏心轴叉，叉孔轴线与叉轴中心线垂直但不相交。两叉由两个三销轴连接。三销轴轴线组成的平面平分两轴间的夹角，即为其等速原理。
+
+	      三销轴式万向节可以直接暴露在外面，并不需要加外球壳和密封装置；对万向节与转向节的同心度要求不太严，中心不一致可由万向节内三销的轴向滑动来补偿；允许所连接的两轴最大夹角可达45°，在转向驱动桥中使用可使汽车获得较小的转弯半径，提高车辆机动性。但其外形尺寸较大，零件形状复杂，加工困难。由于在工作中三销轴轴间有相对轴向滑动，万向节的两轴受复弯矩和轴向力，主动轴一侧需要装轴向推力轴承。主要用于总质量较大的越野车转向驱动桥。
+\end{itemize}
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{0.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{double Cardan joint}
+		\caption{双联式万向节}
+		\label{double Cardan joint}
+	\end{minipage}
+	\begin{minipage}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Tracta joint}
+		\caption{凸块式万向节}
+		\label{Tracta joint}
+	\end{minipage}
+	\begin{minipage}[b]{0.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{three-pin joint}
+		\caption{三销轴式万向节}
+		\label{three-pin joint}
+	\end{minipage}
+\end{figure}
+
+\subsubsection{等速万向节}
+
+等速万向节的等速原理是从结构上保证了主、从动轴为任一交角时，万向节工作过程均能使得传力点永远位于两轴交线的平分面上。
+
+\begin{itemize}
+	\item 球叉式万向节（\cref{Weiss joint}）
+
+	      球叉式万向节的基本结构如\cref{Weiss joint}。主动叉5与从动叉1分别与内、外半轴制成一体。在主、从动叉上，各有4个曲面凹槽。装合后，形成两个相交的环形槽，作为钢球滚道。4个传动钢球4放在槽中，钢球6放在两叉中心的凹槽内，以便定心。
+
+	      为顺利地将钢球装入槽内，在定心钢球6上铣出一个凹面，凹面中央有一深孔。装合时，先将定位销3装入从动叉内，放入定心钢球，然后在两球叉槽中陆续装入三个传动钢球，再将定心钢球的凹面对向放在钢球一侧，以便装入第四个传动钢球，而后再将定心钢球6的孔对准从动叉孔，提起从动发轴使定位销3插入球孔中，最后将锁止销2插入从动叉上与定位销垂直的孔中，以限制定位销轴向移动，保证定心钢球的正确位置。
+
+	      这样的结构及装配设计使得两球叉凹槽的中心在两轴交点两侧且和交点距离相等，因此所有传动钢球时刻处于输入、输出两轴夹角平分面上，保证了输出轴与输入轴的等角速传动。球叉式万向节结构简单，两轴间允许最大交角为\qtyrange[range-phrase = $\,\sim\,$, range-units = single]{32}{33}{\degree}，一般应用于转向驱动桥的转向节处。但在工作时四个传动钢球中只有两个参与传力，钢球与曲面凹槽之间的单位正压力较大，容易磨损。近些年来，有些球叉式万向节中省去了定位销和锁止销，定心钢球上也没有凹面，而靠压力装配。这样，结构更为简单，但拆装较困难。
+
+	\item 固定型球笼式万向节（RF节）（\cref{RF joint}）
+
+	      RF节的组成零件主要有星形套、保持架、球形壳和钢球。主动轴通过花键将动力输入星形套，星形套外表面有6条凹槽，是钢球的内滚道。球形壳的内表面有相应的6条凹槽，形成外滚道。6个钢球装入凹槽中，并由保持架将它们限位在一个平面内。动力由主动轴经钢球，通过球形壳输出。
+
+	      RF节外滚道的中心和内滚道的中心分别位于万向节中心的两边，且与之等距离。任一传动钢球中心到外滚道中心和内滚道中心的距离均也相等。保持架的内外球面、星形套的外球面和球形壳的内球面均以万向节中心为球心。当主、从动轴交角变化时，保持架可相应地滑动以保证前述几何关系仍成立。当主、从动轴相交任意交角$\alpha$时，传力的钢球中心到主、从动轴轴线的距离相等，从而钢球都位于两轴交角平分面上，保证了从动轴与主动轴以相等的角速度旋转。
+
+	      固定型球笼式万向节允许的输入、输出两轴间夹角较大，可达\qtyrange[range-phrase = $\,\sim\,$, range-units = single]{45}{50}{\degree}，且克服了球叉式万向节同一时刻仅有一半的传力钢球参与传力的缺点，在工作时无论传动方向如何，全部6个钢球均参与传力。与球叉式相比，它的承载能力强、结构紧凑、拆卸方便。越来越多车型中将RF节用于转向驱动桥的转向节处，因转向驱动桥要求主销轴线通过转向节中心以防止运动干涉。但此种万向节制造精度要求较高，成本略高。
+
+	\item 伸缩型球笼式万向节（VL节）（\cref{VL joint}）
+
+	      伸缩型球笼式万向节（VL节）的结构与一般球笼式相近，但其内外滚道采用圆筒形直槽，在传递转矩过程中星形套与筒形壳之间可以有轴向的相对滑动。由于这种轴向的相对运动是通过钢球沿内外滚道滚动来实现的，阻力比采用滑动花键小得多。
+
+	      VL节保持架的内球面中心与外球面中心位于万向节中心的两边且与万向节中心等距离。钢球中心到保持架的内、外球面中心距离相等，从而保证万向节的等角速传动。
+
+	      VL型万向节在前置前驱且采用独立悬架的轿车的转向驱动桥中均布置在靠主减速器侧（内侧），以供车轮跳动。若将VL节装在转向节处则会造成机械干涉。
+
+	\item 三枢轴-球面滚轮式万向节（\cref{tripod joint}）
+
+	      三枢轴-球面滚轮式等速万向节是近年来应用较为广泛的一种新型等速万向节。三枢轴及球面滚轮在筒形壳的滚道中运动。当筒形壳（主动轴）转动时，带动球面滚轮从而带动三枢轴随之转动，而三枢轴和从动轴通过花键连接，将动力输出。当输出轴与输入轴没有夹角时，三枢轴的自动定心作用使两轴轴线重合，两者等速传动；当输入、输出轴间存在夹角$\alpha$时，随着三枢轴轴颈的倾斜，球面滚轮沿滚针滑动，球面滚轮的球面和筒形壳上滚道的球面始终贴合，形成的接触母线是筒形壳和球形套圈的共轭曲线，可以保证球面滚子的传力点始终位于两轴交角的平分面上，实现等速传动特性。
+
+	      由于只在一个轴向有明显的运动，这种形式方便了万向节的布置。三枢轴-球面滚轮式万向节允许轴的轴向“插入”运动，因此差速器摇摆等不会对轴承产生预加载力。三枢轴-球面滚轮式万向节具有具有结构简单，体积小、质量轻、润滑好、散热快、承载能力大和工作可靠等优点，典型的伸缩行程可达\SI{50}{\mm}，允许的主、从动轴交角可达\SI{26}{\degree}。可见，它允许的两轴间的夹角范围逊于许多其它的万向节，通常用于后驱动桥或转向驱动桥的内侧，它们所要求的主、从动轴夹角范围较低，但布置空间较小。
+\end{itemize}
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{0.6\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Weiss joint}
+		\caption{球叉式万向节}
+		\label{Weiss joint}
+	\end{minipage}
+	\begin{minipage}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{RF joint}
+		\caption{固定型球笼式万向节}
+		\label{RF joint}
+	\end{minipage}
+	\begin{minipage}[b]{0.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{VL joint}
+		\caption{伸缩型球笼式万向节}
+		\label{VL joint}
+	\end{minipage}
+	\begin{minipage}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{tripod joint}
+		\caption{三枢轴-球面滚轮式万向节}
+		\label{tripod joint}
+	\end{minipage}
+\end{figure}
+
+\clearpage
 
 \end{document}
