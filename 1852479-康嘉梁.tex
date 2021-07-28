@@ -22,6 +22,7 @@ bibname = {参考文献},
 \usepackage[version=4]{mhchem}
 
 \usepackage{siunitx}
+\DeclareSIUnit\rpm{rpm}
 
 \usepackage{cleveref}
 \crefname{section}{节}{节}
@@ -39,7 +40,7 @@ bibname = {参考文献},
 
 \usepackage{graphicx}
 \DeclareGraphicsExtensions{.pdf,.eps,.jpg,.png}
-\graphicspath{{img/body}, {img/gearbox}, {img/automobile electronics}, {img/chassis}, {img/gasoline engine}}
+\graphicspath{{img/body}, {img/gearbox}, {img/automobile electronics}, {img/chassis}, {img/gasoline engine}, {img/diesel engine}}
 \usepackage{caption}
 \captionsetup[figure]{labelsep=period}
 \usepackage{float} %设置图片浮动位置的宏包
@@ -47,6 +48,9 @@ bibname = {参考文献},
 
 \begin{document}
 \maketitle
+\tableofcontents
+
+\clearpage
 
 \section{车身部分}
 \subsection{请简述从发动机排气歧管到车辆排气口，由哪些主要部分组成。各部分的主要功能是什么？}
@@ -201,7 +205,7 @@ bibname = {参考文献},
 	\label{sensors}
 \end{figure}
 
-燃油泵继电器、燃油泵、喷油器、油箱等都是燃油供给系统（\cref{fuel-supplying system}）的组成部分。对于缸内直喷汽油机，供油压力都很高，达到\qtyrange[range-phrase = $\,\sim\,$, range-units = single]{300}{450}{\kPa}，需采用高压油轨，油轨中压力在发动机运转时变化不大，ECU对喷油器的控制主要是控制其喷油时刻和喷油持续时间。燃油泵继电器只在起动时和发动机运转时接通电动燃油泵，提供足够的燃油压力和富余燃油；当发动机发生事故而停止运转时，燃油泵也停止运转，降低起火风险。油箱内因汽油蒸发产生的高压蒸气通到炭罐（\cref{charcoal canister}）中，炭罐底部接大气，上部一边接油箱一边接进气管，ECU在需要时开启炭罐控制阀，燃油蒸气在压力差的作用下被导入到进气管中，随后进入汽缸中燃烧。当然，炭罐系统的存在也使得燃油供给量不完全由喷油量控制，且经过炭罐的蒸气量不便计量，这也是需要设置氧传感器进行$\lambda$闭环控制的原因之一。
+燃油泵继电器、燃油泵、喷油器、油箱等都是燃油供给系统（\cref{fuel-supplying system}）的组成部分。对于缸内直喷汽油机，供油压力都很高，达到\qtyrange[range-phrase = $\,\sim\,$, range-units = single]{300}{450}{\kPa}，需采用高压油轨，油轨中压力在发动机运转时变化不大，ECU对喷油器的控制主要是控制其喷油时刻和喷油持续时间。燃油泵继电器只在起动时和发动机运转时接通电动燃油泵，提供足够的燃油压力和富余燃油；当发动机发生事故而停止运转时，燃油泵也停止运转，降低起火风险。油箱内因汽油蒸发产生的高压蒸气通到碳罐（\cref{charcoal canister}）中，碳罐底部接大气，上部一边接油箱一边接进气管，ECU在需要时开启碳罐控制阀，燃油蒸气在压力差的作用下被导入到进气管中，随后进入汽缸中燃烧。当然，碳罐系统的存在也使得燃油供给量不完全由喷油量控制，且经过碳罐的蒸气量不便计量，这也是需要设置氧传感器进行$\lambda$闭环控制的原因之一。
 
 点火系统要能保证按时并提供足量能量点燃燃烧室内混合气。最佳点火提前角受很多因素影响，其中最主要的是发动机转速和混合气的燃烧速度，而混合气的燃烧速度又和混合气的成分、发动机的结构（包括燃烧室形状和压缩比）等有关。当发动机转速一定时，随着负荷（节气门开度）的增加，进入汽缸的可燃混合气增多，压缩终了时的压力和温度升高，同时残余废气在缸内混合气中所占的比例下降，混合气燃烧速度增大，点火提前角应适当减小；反之负荷减小时点火提前角应加大。当节气门开度一定时，发动机转速升高，燃烧过程所占曲轴转角增大，应适当加大点火提前角，否则燃烧会延续到做功冲程使得功率和经济性下降。对于抗爆性较好的汽油，许用的点火提前角较大，加注不同牌号的汽油后点火提前角也应相应调节。ECU确定点火提前角后，发出信号令点火系统点火。电控点火系统分为有分电器式和无分电器式两种，现在用的多为无分电器点火系统，又称直接点火系统。直接点火系统又有单火花点火线圈、双火花点火线圈和四火花点火线圈等，\cref{ignition system}所示为双火花点火线圈，1、4缸和2、3缸分别同时点火，这样点火时一个汽缸在压缩冲程的上止点附近，另一个汽缸运行到排气冲程上止点附近，但只有一个缸中有可燃混合气，可以被点燃。
 
@@ -216,7 +220,7 @@ bibname = {参考文献},
 \begin{figure}[htbp]
 	\centering
 	\subfigure[燃油供给系统]{\includegraphics[width=0.3\textwidth]{fuel-supplying system}\label{fuel-supplying system}}
-	\subfigure[炭罐]{\includegraphics[width=0.3\textwidth]{charcoal canister}\label{charcoal canister}}
+	\subfigure[碳罐]{\includegraphics[width=0.3\textwidth]{charcoal canister}\label{charcoal canister}}
 	\subfigure[点火系统]{\includegraphics[width=0.3\textwidth]{ignition system}\label{ignition system}}
 	\subfigure[可变气门正时]{\includegraphics[width=0.3\textwidth]{VVT}\label{VVT}}
 	\subfigure[电子油门]{\includegraphics[width=0.3\textwidth]{electronic throttle}\label{electronic throttle}}
@@ -604,8 +608,225 @@ bibname = {参考文献},
 
 \section{柴油机部分}
 \subsection{请简述柴油机工作原理}
+
+1897年，Rudolf Diesel制造出他的第一台著名的高压缩发动机原型。在柴油机中，燃料燃烧产生的高温使高压气体膨胀，进而推动活塞，将化学能转化为机械能。
+
+汽缸中每一次将热能转变为机械功的一系列连续过程为一个工作循环。柴油机一般为四冲程。四冲程柴油机的一个工作循环中，包括进气、压缩、做功（燃烧——膨胀）、排气四个行程。其中，只有做功行程中发动机对外做功，并在其它三个行程借助惯性或同一发动机中其它缸做功产生的动力克服压缩阻力和摩擦阻力，连续运转。
+
+发动机有一最低稳定转速，称为怠速。怠速运转时，喷油量较小，柴油燃烧产生的热量恰可克服发动机内部的阻力，实现发动机的连续稳定运转，此时发动机不对外做功。发动机的起动需靠外部能量，现在一般采用起动电极，电机的输出连到曲轴上的飞轮，将发动机带至起动转速。一般发动机的起动转速比怠速低得多，柴油机的起动转速为\qtyrange[range-phrase = $\,\sim\,$, range-units = single]{150}{300}{\rpm}，但起动时喷油量很大，发动机可以顺利起动，过渡到稳定运行状态。
+
+柴油机的工作原理通过进气、压缩、做功和排气四个行程说明：
+
+\begin{itemize}
+	\item 进气行程：曲轴旋转，活塞从上止点向下止点运动，此时排气门关闭，进气门打开。随着活塞下移，汽缸内容积增大，这就在缸内产生真空度，将外界新鲜空气经进气系统，通过进气门吸入汽缸。当活塞运动到下止点附近，进气行程结束。
+
+	\item 压缩行程：曲轴继续旋转，活塞由下止点向上止点运动，进、排气门都关闭，汽缸内近似为一密封环境。进气行程吸入的新鲜空气和上一工作循环中残余的部分废气被压缩，压力和温度升高。当活塞接近上止点时，喷油器开始喷油，将高压柴油以雾状喷入燃烧室，雾状柴油在燃烧室中迅速蒸发，与空气形成可燃混合气，经过短暂的备燃期之后后自行发火燃烧，无需点火。柴油机的压缩比较大，可达\numrange[range-phrase = $\,\sim\,$]{16}{24}，故压缩终了时气体的温度和压力也较高，温度可达\qtyrange[range-phrase = $\,\sim\,$, range-units = single]{750}{1000}{\kelvin}，压力达\qtyrange[range-phrase = $\,\sim\,$, range-units = single]{3.5}{4.5}{\mega\pascal}，能满足柴油被压燃的外部条件。
+
+	\item 做功行程：作功行程包括燃烧和膨胀过程，进、排气门均关闭。混合气被压燃后迅速燃烧放出大量的热，使汽缸内气体温度和压力急剧升高，经速燃期后，缸内压力达到最大。高温高压气体推动活塞从上止点向下止点运动，通过连杆系将活塞的直线运动转化为曲轴的旋转。发动机通过曲轴输出动力，维持发动机本身运转，并对外作功。随着活塞向下运动，汽缸内容积增加，柴油处于缓燃期，此时压力已开始下降，但温度仍上升。缓燃期结束时温度达到最大值，而后活塞继续下行，气体压力和温度均降低。发动机排气门一般设有一早开角，在活塞运动到下止点前就将排气门打开，利用此时缸内较高的压力推动部分废气排出汽缸。活塞运动到下止点时，作功行程结束。
+
+	\item 排气行程：由于做功行程时排气门已开启，而进气门保持关闭，活塞到达下止点后向上止点运动，燃烧后的废气在自身压力和活塞的推动下经排气门排出。活塞运动到上止点前进气门即打开，利用气门重叠效应扫出废气，同时提高充气效率。活塞越过上止点后，排气门关闭，排气行程结束。由于燃烧室容积的存在，不可能将废气全部排出汽缸。受排气阻力的影响，排气终了时，气体压力仍高于大气压力。
+\end{itemize}
+
+在发动机运转过程中，进排气系统收集新气并使新气均匀进入各缸，为热功交换提供物质基础，排出废气并消除污染物与噪声。供油机构提供清洁适量的燃油按照汽缸发火顺序在合适的时机供给各汽缸。配气机构根据发火顺序和工作状态控制气门开闭时间及开闭时刻及气门升程，控制气体进出各汽缸。冷却系统循环冷却液保持发动机温度在最佳温度范围，避免过热及温度过低带来的不利影响。润滑系统将足量清洁适宜温度的机油供给到全部运动副表面，避免干摩擦造成动力输出下降与零件寿命降低。
+
 \subsection{请简述柴油机与汽油机之间的区别}
+
+\begin{itemize}
+	\item 可燃混合物的形成不同。
+
+	      汽油的沸点低，易气化，因此在常温或微热条件下，很容易与空气形成均匀混合气。这就是为什么非缸内直喷汽油机在进气行程中吸入的是已预混好的可燃混合气。柴油的沸点为\qtyrange[range-phrase = $\,\sim\,$, range-units = single]{180}{360}{\celsius}，不宜在缸外预混。即使加热后能在缸外气化混合，加热过程也会消耗额外的能量，且加热引起空气密度降低，会降低充气效率。因此，柴油机很早就采用了缸内直喷技术，进气行程仅吸入新鲜空气，并在压缩行程将结束时将高压燃油直接喷射到燃烧室内，与空气雾化混合形成浓度分层的混合气。
+
+	\item 着火方式、燃烧过程不同。
+
+	      传统汽油机在缸外形成预制的均质混合气后，空燃比一般控制在理论空燃比附近，若此时尝试将混合气压燃，混合气将同时着火，缸内压力急剧升高，类似于爆炸，可能损坏活塞、连杆等部件。因此，汽油机宜采用外源强制点火燃烧的方式，即先在火花塞附近高温点火，然后让火焰在缸内传播，直至点燃所有混合气。当然，在混合气很稀薄的情况下汽油压燃也是可行的，譬如马自达的e-SKYACTIV X发动机结合了高压缩比和超稀薄燃烧，燃烧更为均匀、充分。
+
+	      柴油的着火温度较低，柴油机从开始喷油到喷出的柴油自燃的时间较短，同一时刻适合燃烧的混合气体量不大，初期工作粗暴的问题不明显。在初期着火燃烧后，紧接着进行边喷油、边气化、边混合的扩散燃烧，并对外做功。柴油压燃并不会产生汽油机那样工作粗暴的问题，适合采用压燃的着火方式，若用点燃则会增加控制难度，且没必要。
+
+	\item 负荷调节方式不同。
+
+	      负荷调节方式的不同和混合气形成方式的差异有很大关系。汽油的均匀混合气能被点燃的过量空气系数范围约为\numrange[range-phrase = $\,\sim\,$]{0.4}{1.4}，这个范围较小，一般通过改变节气门的开度，控制混合气的总量来调节负荷，这种方式称为负荷的量调节。
+
+	      柴油机中柴油在喷出后还未混合均匀时就已被压燃，只要喷束附近的空燃比满足发火条件即可，故在喷油量较大的变化范围内，喷束内都能形成适合着火的混合气。因此，柴油机在一个很大的空燃比变化范围内都可实现压燃着火，可以通过调节一次工作循环中喷油量的多少来调节负荷。而工作循环中进气量基本保持不变，平均的过量空气系数会随负荷变化而变化。这种依靠改变喷油量，即改变平均的过量空气系数来调节负荷的方式，称为负荷的质调节。
+
+	\item 活塞连杆组结构不同。
+
+	      柴油机压缩比大，输出转矩高，曲轴的连杆轴颈较大，一般用斜切的连杆大头，活塞用铸铁制；汽油机转速高，但扭矩较小，多用平切的连杆大头，铝制活塞也用得较多。汽油机的燃烧室一般为统一式燃烧室，用于农用机械等的柴油机可用分隔式燃烧室，降低对喷油压力的要求以节约成本。柴油机压缩比大，燃烧室基本全在活塞顶部，一般用凹顶活塞；汽油机压缩比小，出于气流顺畅考虑多用平顶活塞，但在一些气门升程大的汽油机中需在活塞顶铣出凹坑防止运动干涉。
+
+	\item 排放污染控制系统不同。
+
+	      柴油机中一般为富氧环境，产生的废气中虽污染物的总量较小，但\ce{NO_x}占比较大，造成废气中氧化剂过量，不能像汽油机那样利用三元催化转换器让废气中的\ce{CO}、\ce{HC}还原\ce{NO_x}，需另加尿素等还原剂通过选择性催化还原（SCR）降低尾气中\ce{NO_x}含量。柴油机几乎全部采用缸内直喷技术，柴油和空气混合时间很多，很难充分混合造成部分燃料不完全燃烧产生以\ce{C}颗粒为主体的黑烟，一般需用颗粒捕集系统捕集炭粒以满足颗粒物的排放法规。汽油机的污染控制系统稍显简单，现在一般通过空燃比的闭环控制令混合气始终保持在理论空燃比附近，这样在排气管中用一个三元催化转换器便能完成对尾气中\ce{CO}、\ce{HC}和\ce{NO_x}的处理。现在越来越多的汽油机也开始采用缸内直喷，这同样会带来颗粒物排放增多的问题，随着法规中对汽油机颗粒物排放要求的落实，很多直喷汽油机也要采用颗粒捕集器。汽油的蒸发性较好，需用碳罐吸附油箱中挥发出的汽油，并通入进气管，最终在汽缸内被烧掉；但柴油挥发较少，一般不需碳罐。当然，EGR等其它很多污染控制装置在汽、柴油机上都是可以发挥作用的。
+
+	\item 从总体看，柴油机相较于汽油机的压缩比高，热效率高，燃油消耗率低，加之一般柴油的价格较低，因此柴油机的燃油经济性较好。现代柴油机的排气污染少，排放性能好，且克服了传统柴油机转速低、质量大、噪声大、振动大等缺点，只是先进柴油机的制造费用较高。
+\end{itemize}
+
 \subsection{请简述柴油机的构造（按照机构逐项说明）}
+
+\begin{itemize}
+	\item 机体组：汽缸盖罩、汽缸盖（\cref{valve and cylinder head}）、汽缸垫、汽缸套、汽缸体、油底壳、链条导向板、放油螺钉、油封垫片等。
+
+	      \begin{figure}[htbp]
+		      \centering
+		      \begin{minipage}[b]{0.4\textwidth}
+			      \centering
+			      \includegraphics[width=\textwidth]{valve and cylinder head}
+			      \caption{气门、汽缸盖等}
+			      \label{valve and cylinder head}
+		      \end{minipage}
+	      \end{figure}
+
+	\item 曲柄连杆机构：活塞（\cref{piston and connecting rod diesel}）、活塞环（包括气环和油环）、活塞销、连杆（\cref{piston and connecting rod diesel}）、连杆小头衬套（采用全浮式活塞销时）、金属卡环（采用全浮式活塞销时）、连杆轴瓦、定位凸键、连杆盖（\cref{piston and connecting rod diesel}）、连杆螺栓、曲轴（\cref{crankshaft}）、飞轮（\cref{flywheel}）、转速传感器脉冲轮、曲轴正时齿轮（或正时带轮、正时链轮）、曲轴带轮、扭转减振器、主轴承（包括滑动轴承和一个滑动推力轴承）、主轴承盖等。
+
+	      \begin{figure}[htbp]
+		      \centering
+		      \begin{minipage}[b]{0.25\textwidth}
+			      \centering
+			      \includegraphics[width=\textwidth]{piston and connecting rod diesel}
+			      \caption{活塞、连杆等}
+			      \label{piston and connecting rod diesel}
+		      \end{minipage}
+		      \begin{minipage}[b]{0.45\textwidth}
+			      \centering
+			      \includegraphics[width=\textwidth]{crankshaft}
+			      \caption{曲轴}
+			      \label{crankshaft}
+		      \end{minipage}
+		      \begin{minipage}[b]{0.25\textwidth}
+			      \centering
+			      \includegraphics[width=\textwidth]{flywheel}
+			      \caption{飞轮}
+			      \label{flywheel}
+		      \end{minipage}
+	      \end{figure}
+
+	\item 配气机构：正时齿形带（或正时链）、凸轮轴正时齿型带轮（或正时链轮、正时齿轮）、凸轮轴、凸轮、挺柱、推杆（\cref{pushrod}）、摇臂（\cref{rocker arm}）、摇臂轴、气门间隙调整螺钉、气门座圈、气门（\cref{valve and cylinder head}）、气门导管、气门弹簧、气门弹簧座、锁夹等。
+
+	      \begin{figure}[htbp]
+		      \centering
+		      \begin{minipage}[b]{0.7\textwidth}
+			      \centering
+			      \includegraphics[width=\textwidth]{pushrod}
+			      \caption{推杆}
+			      \label{pushrod}
+		      \end{minipage}
+		      \begin{minipage}[b]{0.2\textwidth}
+			      \centering
+			      \includegraphics[width=\textwidth]{rocker arm}
+			      \caption{摇臂}
+			      \label{rocker arm}
+		      \end{minipage}
+	      \end{figure}
+
+	\item 进气系统：空气滤清器（\cref{air filter}）、进气管、废气涡轮增压器（或机械增压器）、中冷器、空气流量计、进气温度传感器、进气歧管等。
+
+	      \begin{figure}[htbp]
+		      \centering
+		      \begin{minipage}[b]{0.4\textwidth}
+			      \centering
+			      \includegraphics[width=\textwidth]{air filter}
+			      \caption{空气滤清器}
+			      \label{air filter}
+		      \end{minipage}
+	      \end{figure}
+
+	\item 燃油供给系统：柴油箱（\cref{fuel tank}）、输油管（\cref{diesel pipe}）、油水分离器、一级输油泵、柴油滤清器（\cref{diesel filter}）、二级输油泵、调速器（包括飞锤（\cref{flyweight}）、调速杠杆（\cref{governor}）、调速器传动齿轮、调速手柄、调速弹簧等）、分配式喷油泵、喷油提前器、喷油器、喷油泵（\cref{piston pump}）、回油管（\cref{diesel pipe}）等。现在多用的燃油共轨系统，包括ECU、曲轴转速传感器、凸轮轴转速传感器、加速踏板位置传感器、增压传感器、共轨压力传感器、冷却液温度传感器、低压油泵、低压油管、高压油泵、油轨、高压油管、限压阀、喷油器、回油管等。
+
+	      \begin{figure}[htbp]
+		      \centering
+		      \begin{minipage}[b]{0.34\textwidth}
+			      \centering
+			      \includegraphics[width=\textwidth]{fuel tank}
+			      \caption{油箱}
+			      \label{fuel tank}
+		      \end{minipage}
+		      \begin{minipage}[b]{0.35\textwidth}
+			      \centering
+			      \includegraphics[width=\textwidth]{diesel pipe}
+			      \caption{柴油油管}
+			      \label{diesel pipe}
+		      \end{minipage}
+		      \begin{minipage}[b]{0.25\textwidth}
+			      \centering
+			      \includegraphics[width=\textwidth]{diesel filter}
+			      \caption{柴油滤清器}
+			      \label{diesel filter}
+		      \end{minipage}
+		      \begin{minipage}[b]{0.35\textwidth}
+			      \centering
+			      \includegraphics[width=\textwidth]{flyweight}
+			      \caption{飞锤}
+			      \label{flyweight}
+		      \end{minipage}
+		      \begin{minipage}[b]{0.24\textwidth}
+			      \centering
+			      \includegraphics[width=\textwidth]{governor}
+			      \caption{调速杠杆等}
+			      \label{governor}
+		      \end{minipage}
+		      \begin{minipage}[b]{0.35\textwidth}
+			      \centering
+			      \includegraphics[width=\textwidth]{piston pump}
+			      \caption{柱塞泵}
+			      \label{piston pump}
+		      \end{minipage}
+	      \end{figure}
+
+	\item 排气及排放污染控制系统：排气歧管、排气管、前氧传感器、氧化催化剂、连续再生捕集器、选择性催化还原转化器、EGR阀、废气再循环控制阀、二级氧化催化剂、排气消声器（\cref{exhaust silencer}）、排气尾管、强制曲轴箱通风、油气分离器（\cref{air oil separator}）等。
+
+	      \begin{figure}[htbp]
+		      \centering
+		      \begin{minipage}[b]{0.3\textwidth}
+			      \centering
+			      \includegraphics[width=\textwidth]{exhaust silencer}
+			      \caption{排气消声器}
+			      \label{exhaust silencer}
+		      \end{minipage}
+		      \begin{minipage}[b]{0.5\textwidth}
+			      \centering
+			      \includegraphics[width=\textwidth]{air oil separator}
+			      \caption{油气分离器}
+			      \label{air oil separator}
+		      \end{minipage}
+	      \end{figure}
+
+	\item 冷却系统：水泵、冷却水管、散热器、冷却风扇、节温器、水箱（\cref{water tank}）、发动机机体和缸盖上的水套、空调暖风热交换器、冷却水位传感器、冷却液温度传感等。
+
+	      \begin{figure}[htbp]
+		      \centering
+		      \begin{minipage}[b]{0.5\textwidth}
+			      \centering
+			      \includegraphics[width=\textwidth]{water tank}
+			      \caption{水箱}
+			      \label{water tank}
+		      \end{minipage}
+	      \end{figure}
+
+	\item 润滑系统：集滤器、机油油管（\cref{lubricating oil pipe}）、机油泵、溢流阀、机油滤清器、旁通阀、机油冷却器、机油压力调节阀、主油道、曲轴油道、汽缸盖油道、机油加注口、机油尺、机油温度传感器等。
+
+	      \begin{figure}[htbp]
+		      \centering
+		      \begin{minipage}[b]{0.7\textwidth}
+			      \centering
+			      \includegraphics[width=\textwidth]{lubricating oil pipe}
+			      \caption{机油油管}
+			      \label{lubricating oil pipe}
+		      \end{minipage}
+	      \end{figure}
+
+	\item 起动系统：蓄电池、起动电机、起动开关、继电器、起动机电磁开关、起动机的传动机构、单向离合器、电热塞，减压装置、进气道预热装置等。
+
+	\item 其它附件：发电机、继电器、空调压缩机、吊环螺钉（\cref{eye bolt}）、铭牌、发动机悬置等。
+
+	      \begin{figure}[htbp]
+		      \centering
+		      \begin{minipage}[b]{0.5\textwidth}
+			      \centering
+			      \includegraphics[width=\textwidth]{eye bolt}
+			      \caption{吊环螺钉}
+			      \label{eye bolt}
+		      \end{minipage}
+	      \end{figure}
+\end{itemize}
+
 \clearpage
 
 \section{汽车电子部分}
